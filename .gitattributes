@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Husky hooks must stay LF, otherwise /usr/bin/env can fail in Git Bash on Windows.
+.husky/* text eol=lf
+.husky/_/* text eol=lf

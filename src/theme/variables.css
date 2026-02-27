@@ -1,0 +1,95 @@
+:root {
+  --spark-pink-50: oklch(97.1% 0.014 343.198);
+  --spark-pink-100: oklch(94.8% 0.028 342.258);
+  --spark-pink-200: oklch(89.9% 0.061 343.231);
+  --spark-pink-300: oklch(82.3% 0.12 346.018);
+  --spark-pink-400: oklch(71.8% 0.202 349.761);
+  --spark-pink-500: oklch(65.6% 0.241 354.308);
+  --spark-pink-600: oklch(59.2% 0.249 0.584);
+  --spark-pink-700: oklch(52.5% 0.223 3.958);
+  --spark-pink-800: oklch(45.9% 0.187 3.815);
+  --spark-pink-900: oklch(40.8% 0.153 2.432);
+  --spark-pink-950: oklch(28.4% 0.109 3.907);
+
+  --spark-content-width: 52rem;
+  --spark-shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.06);
+  --spark-shadow-card: 0 16px 34px rgba(15, 23, 42, 0.09);
+  --spark-radius-lg: 1rem;
+  --spark-radius-xl: 1.15rem;
+}
+
+:root[data-theme='light'] {
+  --spark-background:
+    radial-gradient(circle at 18% 0%, rgba(244, 114, 182, 0.12), transparent 36%),
+    radial-gradient(circle at 100% 0%, rgba(191, 219, 254, 0.2), transparent 37%),
+    linear-gradient(180deg, #fefcfe 0%, #fff8fc 50%, #fffaf5 100%);
+  --spark-bg-solid: #fdf9fd;
+  --spark-surface: rgba(255, 255, 255, 0.9);
+  --spark-surface-muted: rgba(255, 255, 255, 0.76);
+  --spark-surface-subtle: rgba(255, 247, 252, 0.82);
+  --spark-surface-strong: #ffffff;
+  --spark-border: rgba(233, 30, 99, 0.14);
+  --spark-border-soft: rgba(244, 114, 182, 0.19);
+  --spark-text: #221a2e;
+  --spark-text-strong: #1b1226;
+  --spark-muted: #6b6178;
+  --spark-muted-strong: #564b64;
+  --spark-accent: var(--spark-pink-500);
+  --spark-accent-strong: var(--spark-pink-600);
+  --spark-accent-soft: color-mix(in srgb, var(--spark-pink-200) 70%, white);
+  --spark-warning-bg: #fff2d9;
+  --spark-warning-text: #5a3c00;
+  --spark-focus-ring: rgba(244, 114, 182, 0.38);
+
+  --ion-background-color: var(--spark-bg-solid);
+  --ion-text-color: var(--spark-text);
+  --ion-item-background: var(--spark-surface-muted);
+  --ion-toolbar-background: transparent;
+  --ion-card-background: var(--spark-surface);
+  --ion-border-color: var(--spark-border-soft);
+}
+
+:root[data-theme='dark'] {
+  --spark-background:
+    radial-gradient(circle at 14% 0%, rgba(236, 72, 153, 0.18), transparent 37%),
+    radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.14), transparent 38%),
+    linear-gradient(180deg, #140d1a 0%, #0f0a16 56%, #08060d 100%);
+  --spark-bg-solid: #0f0a16;
+  --spark-surface: rgba(28, 18, 38, 0.86);
+  --spark-surface-muted: rgba(34, 22, 46, 0.74);
+  --spark-surface-subtle: rgba(34, 22, 46, 0.64);
+  --spark-surface-strong: #1f142a;
+  --spark-border: rgba(236, 72, 153, 0.31);
+  --spark-border-soft: rgba(244, 114, 182, 0.25);
+  --spark-text: #fce9f6;
+  --spark-text-strong: #fff7fc;
+  --spark-muted: #dcb5cd;
+  --spark-muted-strong: #eed2e3;
+  --spark-accent: var(--spark-pink-400);
+  --spark-accent-strong: var(--spark-pink-300);
+  --spark-accent-soft: rgba(244, 114, 182, 0.24);
+  --spark-warning-bg: rgba(251, 191, 36, 0.2);
+  --spark-warning-text: #fef3c7;
+  --spark-focus-ring: rgba(244, 114, 182, 0.44);
+
+  --ion-background-color: var(--spark-bg-solid);
+  --ion-text-color: var(--spark-text);
+  --ion-item-background: var(--spark-surface-muted);
+  --ion-toolbar-background: transparent;
+  --ion-card-background: var(--spark-surface);
+  --ion-border-color: var(--spark-border-soft);
+}
+
+:root {
+  --ion-color-primary: var(--spark-accent);
+  --ion-color-primary-rgb: 236, 72, 153;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #be185d;
+  --ion-color-primary-tint: #f472b6;
+  --ion-color-medium: var(--spark-muted);
+  --ion-font-family: 'Manrope', 'Avenir Next', 'Segoe UI', sans-serif;
+}
+
+:root.ion-palette-dark {
+  color-scheme: dark;
+}

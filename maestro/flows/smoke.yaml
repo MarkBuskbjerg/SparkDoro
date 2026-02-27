@@ -1,0 +1,8 @@
+appId: dk.sparkdoro.app
+---
+- launchApp
+- assertVisible: "SparkDoro"
+- assertVisible: "Start"
+- tapOn: "Start"
+- assertVisible: "Pause"
+- tapOn: "Reset"

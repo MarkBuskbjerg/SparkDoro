@@ -1,0 +1,18 @@
+name: ci-ios
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: echo "Implement Xcode build + Live Activity smoke test on a signed CI runner."

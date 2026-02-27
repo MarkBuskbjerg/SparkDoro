@@ -1,0 +1,408 @@
+.app-loader {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: var(--spark-muted);
+}
+
+ion-app,
+ion-content {
+  --background: transparent;
+}
+
+ion-content::part(background) {
+  background: transparent;
+}
+
+.app-header {
+  backdrop-filter: blur(18px);
+}
+
+.app-toolbar {
+  --background: color-mix(in srgb, var(--spark-surface) 86%, transparent);
+  --color: var(--spark-text);
+  --border-color: transparent;
+  --min-height: 3.55rem;
+  border-bottom: 1px solid var(--spark-border-soft);
+}
+
+.app-toolbar ion-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.header-icon-button {
+  --border-radius: 0.82rem;
+  --background: transparent;
+  --color: var(--spark-text);
+  border: 1px solid var(--spark-border-soft);
+  --padding-start: 0.45rem;
+  --padding-end: 0.45rem;
+}
+
+.header-icon-button ion-icon {
+  font-size: 1.15rem;
+}
+
+.page-body {
+  margin: 0 auto;
+  width: min(100%, var(--spark-content-width));
+  padding: 0.85rem clamp(0.85rem, 2.3vw, 1.3rem) 2rem;
+}
+
+.screen-heading {
+  margin: 0 0 0.1rem;
+  color: var(--spark-text-strong);
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.timer-card,
+.settings-section,
+.chart-wrap,
+.consent-card,
+.about-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--spark-border);
+  border-radius: var(--spark-radius-xl);
+  background: var(--spark-surface);
+  box-shadow: var(--spark-shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.timer-card::before,
+.settings-section::before,
+.chart-wrap::before,
+.consent-card::before,
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--spark-accent) 9%, transparent) 0%,
+    transparent 82%
+  );
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.timer-card ion-card-content,
+.settings-section > *,
+.chart-wrap > *,
+.consent-card > *,
+.about-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.timer-card {
+  margin: 0;
+}
+
+.timer-card ion-card-content {
+  padding: 1.35rem 1.2rem 1.2rem;
+}
+
+.time-label {
+  margin: 0.35rem 0 0;
+  font-size: clamp(3.4rem, 14vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  color: var(--spark-text-strong);
+}
+
+.session-label {
+  margin: 0 0 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--spark-border-soft);
+  background: transparent;
+  padding: 0.18rem 0.62rem;
+  color: var(--spark-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.progress-label {
+  margin: 0.8rem 0 0.35rem;
+  color: var(--spark-muted);
+  font-size: 0.82rem;
+}
+
+.timer-footnote {
+  margin: 0.12rem 0 0;
+  color: var(--spark-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.control-row {
+  display: flex;
+  gap: 0.62rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.control-row ion-button {
+  --border-radius: 0.88rem;
+  --box-shadow: none;
+  --padding-top: 0.7rem;
+  --padding-bottom: 0.7rem;
+  --padding-start: 1rem;
+  --padding-end: 1rem;
+  min-height: 2.75rem;
+  font-weight: 630;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-size: 0.9rem;
+}
+
+.control-row-stack ion-button {
+  flex: 1 1 11rem;
+}
+
+.warning-banner {
+  margin-top: 1rem;
+  border: 1px solid color-mix(in srgb, var(--spark-warning-text) 30%, transparent);
+  border-radius: 0.92rem;
+  background: var(--spark-warning-bg);
+  color: var(--spark-warning-text);
+  padding: 0.72rem 0.92rem;
+  font-size: 0.88rem;
+}
+
+.menu-popover {
+  min-width: 12.5rem;
+  padding: 0.4rem;
+  border-radius: 0.95rem;
+  border: 1px solid var(--spark-border-soft);
+  background: var(--spark-surface);
+  box-shadow: var(--spark-shadow-card);
+}
+
+.menu-popover ion-button {
+  --color: var(--spark-text);
+  --border-radius: 0.78rem;
+  --background: transparent;
+  --background-hover: color-mix(in srgb, var(--spark-accent-soft) 60%, transparent);
+  justify-content: flex-start;
+  font-weight: 560;
+}
+
+.focus-lock-modal {
+  margin: 35vh auto 0;
+  max-width: 22.5rem;
+  border-radius: 1.12rem;
+  border: 1px solid var(--spark-border-soft);
+  background: var(--spark-surface);
+  padding: 1rem 1rem 0.95rem;
+  box-shadow: var(--spark-shadow-card);
+}
+
+.consent-card {
+  margin-bottom: 1rem;
+  padding: 0.8rem 0.95rem 0.95rem;
+}
+
+.support-text {
+  margin: 0.4rem 0 0;
+  color: var(--spark-muted);
+  line-height: 1.5;
+  font-size: 0.88rem;
+}
+
+.settings-layout,
+.about-layout,
+.stats-layout {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.settings-section {
+  padding: 0.95rem;
+}
+
+.settings-heading {
+  margin: 0 0 0.72rem;
+  color: var(--spark-muted-strong);
+  font-size: 0.83rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.settings-item {
+  --padding-start: 0.78rem;
+  --inner-padding-end: 0.78rem;
+  --background: var(--spark-surface-muted);
+  --min-height: 3.08rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--spark-border-soft);
+  border-radius: 0.96rem;
+}
+
+.settings-item::part(native) {
+  border-radius: 0.96rem;
+  background: var(--spark-surface-muted);
+}
+
+.settings-item ion-label {
+  color: var(--spark-text) !important;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  margin-inline-end: 0.5rem;
+}
+
+.settings-item ion-input,
+.settings-item ion-select {
+  color: var(--spark-text);
+}
+
+.preset-summary {
+  margin: 0.5rem 0 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+}
+
+.preset-pill {
+  border: 1px solid var(--spark-border-soft);
+  border-radius: 999px;
+  background: var(--spark-surface-muted);
+  color: var(--spark-text);
+  padding: 0.23rem 0.58rem;
+  font-size: 0.78rem;
+  font-weight: 620;
+  letter-spacing: 0.025em;
+}
+
+.preset-form {
+  margin-top: 1rem;
+  border: 1px dashed var(--spark-border);
+  border-radius: 1rem;
+  padding: 0.8rem;
+  background: var(--spark-surface-subtle);
+}
+
+.preset-form-grid {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.stats-filters {
+  padding-bottom: 0.75rem;
+}
+
+.stats-segment {
+  background: var(--spark-surface-muted);
+  border: 1px solid var(--spark-border-soft);
+  border-radius: 0.95rem;
+  padding: 0.2rem;
+}
+
+.stats-segment ion-segment-button {
+  --border-radius: 0.82rem;
+  --indicator-color: var(--spark-accent);
+  --color-checked: #ffffff;
+  --color: var(--spark-muted);
+  min-height: 2.45rem;
+  font-weight: 620;
+  letter-spacing: 0.015em;
+}
+
+.stats-date-grid {
+  margin-top: 0.62rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.chart-wrap {
+  margin-top: 0.35rem;
+  height: 268px;
+  padding: 0.75rem 0.65rem 0.4rem;
+}
+
+.settings-section .chart-wrap {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0.4rem 0 0;
+}
+
+.settings-section .chart-wrap::before {
+  content: none;
+}
+
+.about-card {
+  padding: 0.95rem 1rem;
+}
+
+.about-layout p {
+  margin: 0.25rem 0 0;
+  color: var(--spark-muted);
+}
+
+ion-button.ion-focused::part(native),
+ion-button::part(native):focus-visible,
+ion-segment-button.ion-focused::part(native),
+ion-segment-button::part(native):focus-visible,
+ion-input.ion-focused::part(native),
+ion-input::part(native):focus-visible,
+ion-select.ion-focused::part(text),
+ion-select.ion-focused::part(native),
+ion-select::part(native):focus-visible,
+ion-select::part(text):focus-visible,
+ion-toggle.ion-focused::part(track),
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--spark-focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--spark-focus-ring) 40%, transparent);
+}
+
+ion-select.ion-focused,
+ion-input.ion-focused,
+ion-toggle.ion-focused {
+  outline: 2px solid var(--spark-focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--spark-focus-ring) 40%, transparent);
+  border-radius: 0.9rem;
+}
+
+@media (min-width: 760px) {
+  .preset-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .preset-form-grid .settings-item:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .stats-date-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .page-body {
+    padding: 0.8rem;
+  }
+
+  .control-row ion-button {
+    flex: 1 1 100%;
+  }
+}
